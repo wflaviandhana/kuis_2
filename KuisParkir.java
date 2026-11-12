@@ -12,7 +12,10 @@ public class KuisParkir {
 
         while (jam != 0) {
             // Tarif: jam pertama Rp 5000, jam berikutnya Rp 3000 per jam
-            int biaya = 5000 + (jam - 1) * 3000;
+            int biaya = 5000;
+            if (jam > 1) {
+                biaya += (jam - 1) * 3000;
+            } 
             total = biaya;
             System.out.println("Biaya parkir: Rp " + biaya);
 
